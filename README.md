@@ -1,12 +1,8 @@
 # Ex02 Django ORM Web Application
-## Date: 
+## Date: 10-10-23
 
 ## AIM
 To develop a Django application to store and retrieve data from a Football Players database using Object Relational Mapping(ORM).
-
-## Entity Relationship Diagram
-
-Include your ER diagram here
 
 ## DESIGN STEPS
 
@@ -23,12 +19,33 @@ Enter the code for admin.py and models.py
 Execute Django admin and create 10 Football players
 
 ## PROGRAM
+```
+admin.py 
 
-Include your code here
+from django.contrib import admin
+from .models import Football,FootballAdmin
+admin.site.register(Football,FootballAdmin)
+
+models.py
+
+from django.db import models
+from django.contrib import admin
+class Football (models.Model):
+    name=models.CharField(max_length=100,help_text="FOOTBALL PLAYER")
+    jerseyno=models.IntegerField()
+    country=models.CharField(max_length=100)
+    age=models.IntegerField()
+    place=models.IntegerField()
+
+class FootballAdmin(admin.ModelAdmin):
+    list_display=('name','jerseyno','country','age','place')
+
+```
+
 
 ## OUTPUT
+![Uploading Screenshot (382) - Copy.png…]()
 
-Include the screenshot of your admin page.
 
 
 ## RESULT
