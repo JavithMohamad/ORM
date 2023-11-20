@@ -44,7 +44,7 @@ class FootballAdmin(admin.ModelAdmin):
 
 
 ## OUTPUT
-![Uploading Screenshot (382) - Copy.png…]()
+![image](https://github.com/JavithMohamad/ORM/assets/121215951/5ff7d87c-c217-4323-9901-22e27451edf7)
 
 
 
